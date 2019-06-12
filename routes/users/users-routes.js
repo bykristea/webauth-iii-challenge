@@ -1,7 +1,9 @@
-const router = require(express).Router();
+const router = require('express').Router();
 
 const Users = require('./users-model.js');
 
+// at /api/users
+// will return users
 router.get('/', (req, res) => {
     Users.find()
         .then(users => {
