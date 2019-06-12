@@ -1,0 +1,20 @@
+{
+  "name": "Auth3",
+  "version": "1.0.0",
+  "description": "webAuth Project",
+  "main": "index.js",
+  "repository": "git@github.com:bykristea/webauth-iii-challenge.git",
+  "author": "Kristea Gamel <krgamel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "knex": "^0.17.5",
+    "sqlite3": "^4.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
