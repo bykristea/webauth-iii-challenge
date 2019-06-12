@@ -6,9 +6,14 @@
   "repository": "git@github.com:bykristea/webauth-iii-challenge.git",
   "author": "Kristea Gamel <krgamel@gmail.com>",
   "license": "MIT",
+  "scripts":{
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
   "dependencies": {
     "bcrypt": "^3.0.6",
     "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "helmet": "^3.18.0",
     "knex": "^0.17.5",
