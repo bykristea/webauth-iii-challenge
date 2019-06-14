@@ -23,6 +23,6 @@ module.exports = {
     },
 
     findBy: fliter => {
-        return db('users').where(fliter);
+        return db('users').where(filter);
     }
 }

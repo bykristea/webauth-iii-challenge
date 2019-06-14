@@ -21,6 +21,8 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.17.5",
     "morgan": "^1.9.1",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "sqlite3": "^4.0.8"
   },
   "devDependencies": {

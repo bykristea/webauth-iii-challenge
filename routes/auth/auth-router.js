@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 
-const Users = require('../routes/users/users-model.js');
+const Users = require('../users/users-model.js');
 
 const genToken = user => {
     const payload = {
