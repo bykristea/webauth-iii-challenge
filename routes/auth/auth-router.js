@@ -1,10 +1,8 @@
 require('dotenv').config();
 
-
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
 
 const Users = require('../users/users-model.js');
 
@@ -33,7 +31,7 @@ router.post('/register', (req, res) => {
 
     Users.add(user)
         .then(id => {
-            res.status(201).json({message: 'user Registration is successfull'})
+            res.status(201).json({message: id})
         })
         .catch(err => {
             res.status(500).json({message: 'Registration Failed'});

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 class Login extends React.Component {
     state = {
@@ -26,7 +27,9 @@ class Login extends React.Component {
             .catch(err => {
                 console.log(err)
             })
+            this.props.history.push('/users');
     }
+
     render() {
         return(
             <div>
@@ -49,8 +52,8 @@ class Login extends React.Component {
                         name="password"
                         id="password"
                         value={this.state.password}
-                        onChange={this.handleInputChange}
-                        type="text"
+                        onChange={this.handleChange}
+                        type="password"
                         />
                    </div>  
 
@@ -63,4 +66,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);
