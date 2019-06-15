@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:6000/api/users';
+axios.defaults.baseURL = 'http://localhost:4000/api/users';
 
 axios.interceptors.request.use(
     function(options) {
@@ -19,9 +19,12 @@ export default (Component) => {
     return class Authenticated extends React.Component {
         render() {
     const token = localStorage.getItem('token');
-    if(!token) { this.props.history.push('/login') }
-
-    return <></>
+    const fail = <h1>Please Login</h1>;
+    console.log(token)
+    return <>
+                { token ? <Component { ...this.props } /> 
+                        : this.props.history.push('/login') }
+           </>
         }
     }
 } 
